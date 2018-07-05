@@ -4,10 +4,10 @@ public class ModSounds
     {
         //Resource location
         ResourceLocation healing = new ResourceLocation("lozmod", "lozmod.music.sound.healing");
-		ResourceLocation soaring = new ResourceLocation("lozmod", "lozmod.music.sound.soaring");
-		ResourceLocation storm = new ResourceLocation("lozmod", "lozmod.music.sound.storm");
-		ResourceLocation sun = new ResourceLocation("lozmod", "lozmod.music.sound.sun");
-		ResourceLocation lullaby = new ResourceLocation("lozmod", "lozmod.music.sound.lullaby");
+	ResourceLocation soaring = new ResourceLocation("lozmod", "lozmod.music.sound.soaring");
+	ResourceLocation storm = new ResourceLocation("lozmod", "lozmod.music.sound.storm");
+	ResourceLocation sun = new ResourceLocation("lozmod", "lozmod.music.sound.sun");
+	ResourceLocation lullaby = new ResourceLocation("lozmod", "lozmod.music.sound.lullaby");
         
         //Registers sound
         ForgeRegistries.SOUND_EVENTS.register(new net.minecraft.util.SoundEvent(healing).setRegistryName(healing));
