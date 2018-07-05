@@ -1,11 +1,6 @@
 public class ModItems
 {
 	//declare variables
-    //armor
-    public static ItemDeityArmor deityarmor;
-    public static ItemGoronArmor goronarmor;
-    public static ItemHeroArmor heroarmor;
-    public static ItemZoraArmor zoraarmor;
 	//magic
 	public static ItemAncientTablet ancienttablet;
 	public static ItemCourageShard courageshard;
@@ -56,11 +51,74 @@ public class ModItems
     
     public static void init()
     {
-        //item-armor
-        deityarmor = registerItem(new ItemDeityArmor();
-        goronarmor = registerItem(new ItemGoronArmor();
-        heroarmor = registerItem(new ItemHeroArmor();
-        zoraarmor = registerItem(new ItemZoraArmor();
+        //diety armor
+		infinity_helmet = new ItemArmorInfinity(EntityEquipmentSlot.HEAD);
+        infinity_helmet.setUnlocalizedName("LOZmod:deityarmorhelmet");
+        registerItem(infinity_helmet.setRegistryName("deityarmorhelmet"));
+
+        infinity_chestplate = new ItemArmorInfinity(EntityEquipmentSlot.CHEST);
+        infinity_chestplate.setUnlocalizedName("LOZmod:deityarmorbody");
+        registerItem(infinity_chestplate.setRegistryName("deityarmorbody"));
+
+        infinity_pants = new ItemArmorInfinity(EntityEquipmentSlot.LEGS);
+        infinity_pants.setUnlocalizedName("LOZmod:deityarmorlegs");
+        registerItem(infinity_pants.setRegistryName("deityarmorlegs"));
+
+        infinity_boots = new ItemArmorInfinity(EntityEquipmentSlot.FEET);
+        infinity_boots.setUnlocalizedName("LOZmod:deityarmorboots");
+		registerItem(infinity_boots.setRegistryName("deityarmorboots"));
+		
+		//goron armor
+		infinity_helmet = new ItemArmorInfinity(EntityEquipmentSlot.HEAD);
+        infinity_helmet.setUnlocalizedName("LOZmod:goronarmorhelmet");
+        registerItem(infinity_helmet.setRegistryName("goronarmorhelmet"));
+
+        infinity_chestplate = new ItemArmorInfinity(EntityEquipmentSlot.CHEST);
+        infinity_chestplate.setUnlocalizedName("LOZmod:goronarmorbody");
+        registerItem(infinity_chestplate.setRegistryName("goronarmorbody"));
+
+        infinity_pants = new ItemArmorInfinity(EntityEquipmentSlot.LEGS);
+        infinity_pants.setUnlocalizedName("LOZmod:goronarmorlegs");
+        registerItem(infinity_pants.setRegistryName("goronarmorlegs"));
+
+        infinity_boots = new ItemArmorInfinity(EntityEquipmentSlot.FEET);
+        infinity_boots.setUnlocalizedName("LOZmod:goronarmorboots");
+		registerItem(infinity_boots.setRegistryName("goronarmorboots"));
+		
+		//hero armor
+		infinity_helmet = new ItemArmorInfinity(EntityEquipmentSlot.HEAD);
+        infinity_helmet.setUnlocalizedName("LOZmod:heroarmorhelmet");
+        registerItem(infinity_helmet.setRegistryName("heroarmorhelmet"));
+
+        infinity_chestplate = new ItemArmorInfinity(EntityEquipmentSlot.CHEST);
+        infinity_chestplate.setUnlocalizedName("LOZmod:heroarmorbody");
+        registerItem(infinity_chestplate.setRegistryName("heroarmorbody"));
+
+        infinity_pants = new ItemArmorInfinity(EntityEquipmentSlot.LEGS);
+        infinity_pants.setUnlocalizedName("LOZmod:heroarmorlegs");
+        registerItem(infinity_pants.setRegistryName("heroarmorlegs"));
+
+        infinity_boots = new ItemArmorInfinity(EntityEquipmentSlot.FEET);
+        infinity_boots.setUnlocalizedName("LOZmod:heroarmorboots");
+		registerItem(infinity_boots.setRegistryName("heroarmorboots"));
+		
+		//zora armor
+		infinity_helmet = new ItemArmorInfinity(EntityEquipmentSlot.HEAD);
+        infinity_helmet.setUnlocalizedName("LOZmod:zoraarmorhelmet");
+        registerItem(infinity_helmet.setRegistryName("zoraarmorhelmet"));
+
+        infinity_chestplate = new ItemArmorInfinity(EntityEquipmentSlot.CHEST);
+        infinity_chestplate.setUnlocalizedName("LOZmod:zoraarmorbody");
+        registerItem(infinity_chestplate.setRegistryName("zoraarmorbody"));
+
+        infinity_pants = new ItemArmorInfinity(EntityEquipmentSlot.LEGS);
+        infinity_pants.setUnlocalizedName("LOZmod:zoraarmorlegs");
+        registerItem(infinity_pants.setRegistryName("zoraarmorlegs"));
+
+        infinity_boots = new ItemArmorInfinity(EntityEquipmentSlot.FEET);
+        infinity_boots.setUnlocalizedName("LOZmod:zoraarmorboots");
+		registerItem(infinity_boots.setRegistryName("zoraarmorboots"));
+		
 	    //magic
 	    ancienttablet = registerItem(new ItemAncientTablet();
 	    courageshard = registerItem(new ItemCourageShard();
