@@ -5,6 +5,7 @@ public class CommonProxy {
         ModItems.init();
         ModBlocks.init();
         ModEntities.init();
+	ModSounds.init();
     
     //Sounf registration
     ResourceLocation healing = new ResourceLocation("lozmod", "lozmod.music.sound.healing");
