@@ -1,5 +1,6 @@
 public class ModItems
 {
+	declare variables
     //armor
     public static ItemDeityArmor deityarmor;
     public static ItemGoronArmor goronarmor;
