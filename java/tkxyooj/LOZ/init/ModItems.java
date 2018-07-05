@@ -166,6 +166,17 @@ public class ModItems
 	    mastersword = registerItem(new ItemMasterSword();
 	    princessrapier = registerItem(new ItemPrincessRapier();
         sagesword = registerItem(new ItemSageSword();
+		
+		//pegasus boots
+		infinity_helmet = new ItemArmorInfinity(EntityEquipmentSlot.FEET);
+        infinity_helmet.setUnlocalizedName("LOZmod:pegasusboots");
+        registerItem(infinity_helmet.setRegistryName("pegasusboots"));
+		
+		//zoras flippers
+		infinity_helmet = new ItemArmorInfinity(EntityEquipmentSlot.FEET);
+        infinity_helmet.setUnlocalizedName("LOZmod:zoraasflippers");
+        registerItem(infinity_helmet.setRegistryName("zoraasflippers"));
+
     }
     public static <V extends Item> V registerItem(V item) 
     {
