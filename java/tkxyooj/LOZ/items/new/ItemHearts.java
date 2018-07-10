@@ -1,4 +1,4 @@
-public class ItemPickupOnly extends Item
+public class ItemHearts extends Item
 {
 	public ItemPickupOnly() 
   {
