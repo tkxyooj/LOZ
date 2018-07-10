@@ -64,6 +64,7 @@ public class Config
 
 	public static void postInit() 
   {
+		public static boolean enabledHealthModification() {return healthModification}
     public static boolean alwaysPickupHearts() { return alwaysHeartsPickup; }
 	  public static boolean isClassicMode() { return enableClassicMode; }
 	  public static int getMaxHearts() { return maxHeart; }
