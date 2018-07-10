@@ -1,3 +1,9 @@
+/** Main class
+Config.preInit(event); in preInit
+Config.postInit(event); in postInit
+*/
+
+
 public class Config
 {
 	public static Configuration config;
@@ -24,9 +30,10 @@ public class Config
 	private static int mobLootFrequency;
 
 	public static void preInit(FMLPreInitializationEvent event) {
-		config = new Configuration(new File(event.getModConfigurationDirectory().getAbsolutePath() + ModInfo.CONFIG_PATH));
+		config = new Configuration(new File(event.getModConfigurationDirectory().getAbsolutePath() + "/LOZmod.cfg"));
 		config.load();
-		ZSSItems.initConfig(config);
+		ModItems.initConfig(config);
+		
     String maxHeartString = config.get("General", "Max Health Obtainable. None is for unlimited health", "NONE");
 
 		String category = "client";
@@ -47,9 +54,9 @@ public class Config
       maxHeart = 40;
       break;
     }
-    heartPieceWeight = MathHelper.clamp_int(config.get("Loot", "Weight: Heart Piece (vanilla chests only) [1-10]", 1).getInt(), 1, 10);
-		grassDropChance = 0.01F * (float) MathHelper.clamp_int(config.get("Loot", "Chance (as a percent) of loot dropping from grass [0-100]", 15).getInt(), 0, 100);
-		creeperLoot = 0.01F * (float) MathHelper.clamp_int(config.get("Loot", "Chance (as a percent) for creepers to drop bombs [0-100]", 10).getInt(), 0, 100);
+    heartPieceWeight = MathHelper.clamp_int(config.get("Loot", "Weight of heart pieces found in vanilla chests) [1-10]", 1).getInt(), 1, 10);
+		grassDropChance = 0.01F * (float) MathHelper.clamp_int(config.get("Loot", "Chance (out of 100) of loot dropping from grass [0-100]", 15).getInt(), 0, 100);
+		creeperLoot = 0.01F * (float) MathHelper.clamp_int(config.get("Loot", "Chance (out of 100) for creepers to drop bombs [0-100]", 10).getInt(), 0, 100);
 		mobLootFrequency = MathHelper.clamp_int(config.get("Loot", "Frequency of small heart and magic jar drops from mobs [zero to disable; 1 = rare, 10 = very common]", 5).getInt(), 0, 10);
 		
 		config.save();
