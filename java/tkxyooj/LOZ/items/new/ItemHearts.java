@@ -4,7 +4,9 @@ public class ItemHearts extends Item
   {
 		super();
 		setMaxStackSize(1);
-		setUnlocalizedName("heart_small");
+		setUnlocalizedName("hearts");
+		setRegistryName("hearts");
+		ForgeRegistries.ITEMS.register(this);
 	}
 
   @Override
