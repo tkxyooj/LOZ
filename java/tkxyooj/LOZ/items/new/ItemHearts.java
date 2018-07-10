@@ -4,6 +4,7 @@ public class ItemHearts extends Item
   {
 		super();
 		setMaxStackSize(1);
+		setUnlocalizedName("heart_small");
 	}
 
   @Override
