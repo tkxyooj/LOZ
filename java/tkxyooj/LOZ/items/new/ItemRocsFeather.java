@@ -1,4 +1,4 @@
-public class ItemRocsFeather
+public class ItemRocsFeather extends Item
 {
     public ItemRocsFeather() 
     {
