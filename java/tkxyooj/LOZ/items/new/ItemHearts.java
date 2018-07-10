@@ -1,7 +1,6 @@
 public class ItemHearts extends Item
 {
-	public ItemPickupOnly() 
-  {
+public ItemHearts() {
 		super();
 		setMaxStackSize(1);
 		setUnlocalizedName("hearts");
