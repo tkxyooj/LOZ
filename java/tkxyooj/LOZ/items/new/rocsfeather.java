@@ -23,39 +23,18 @@ public class ItemRocsFeather
     {
         super.setMaxDamage(0);
     }
-    
-	public int getMaxFlightTime() 
-    {
-	    return 100;
-	}
-
-	boolean isJumping = Minecraft.getMinecraft().gameSettings.keyBindJump.isKeyDown();
-	if (!player.onGround) 
-    {
-		if (!isJumping) 
-        {
-			hasHadBreakTime = true;
-		}
-		if (!hasHadBreakTime) 
-        {
-			if (tickFlight > 0) 
-            {
-				tickFlight = MathHelper.clamp(tickFlight - 4, 0, getMaxFlightTime());
+	
+	@Override
+	public void tick() 
+	{
+		boolean isJumping = Minecraft.getMinecraft().gameSettings.keyBindJump.isKeyDown();
+		if (!player.onGround) 
+		{
+    			if (isJumping && player.motionY < 0) 
+        		{
+				player.motionY = Math.min(player.motionY + 0.1, player.motionY * 0.5);
+				player.fallDistance = 0;
 			}
 		}
-    	if (ClientPower.isPowered() && isJumping && hasHadBreakTime && player.motionY < 0 && tickFlight < getMaxFlightTime()) 
-        {
-			tickFlight++;
-			player.motionY = Math.min(player.motionY + 0.1, player.motionY * 0.5);
-			player.fallDistance = 0;
-			NetworkHandler.sendPacketToServer(new PacketFlightData(player));
-		}
-	} 
-	
-    @Override
-	public void tick() 
-    {
-		if (getPlayer().onGround && tickFlight > 0)
-	    tickFlight = MathHelper.clamp(tickFlight - 4, 0, getMaxFlightTime());
-    }
+	}
 }
