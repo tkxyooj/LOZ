@@ -1,6 +1,7 @@
 public class ItemHearts extends Item
 {
-public ItemHearts() {
+	public ItemHearts() 
+	{
 		super();
 		setMaxStackSize(1);
 		setUnlocalizedName("hearts");
