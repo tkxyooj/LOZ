@@ -30,6 +30,8 @@ public class ItemZorasFlippers extends ItemArmor
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
     {
+    	player.addPotionEffect(new PotionEffect(MobEffects.AQUA_AFFINITY, (int) 3600, (int) 1));
+	player.setAir(300);
         boolean flying = player.capabilities.isFlying;
         boolean swimming = player.isInsideOfMaterial(Material.water) || player.isInWater();
         
