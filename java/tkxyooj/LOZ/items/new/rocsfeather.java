@@ -28,7 +28,7 @@ public class ItemRocsFeather
 	public void tick() 
 	{
 		boolean isJumping = Minecraft.getMinecraft().gameSettings.keyBindJump.isKeyDown();
-		if (!player.onGround) 
+		if((player.getHeldItemMainhand(this) || player.getHeldItemOffhand(this)) && !player.onGround) 
 		{
     			if (isJumping && player.motionY < 0) 
         		{
