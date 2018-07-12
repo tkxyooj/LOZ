@@ -7,6 +7,7 @@ public class ItemZorasFlippers extends ItemArmor
     {
         super(zorasflippers, 0, slot);
         this.slot = slot;
+	this.addEnchantment(Enchantments.AQUA_AFFINITY, 1);
         setCreativeTab(LOZ.tab);
     }
 
