@@ -42,7 +42,7 @@ public class ItemZorasFlippers extends ItemArmor
     	if (armorType == EntityEquipmentSlot.FEET)
     	{
     		player.setAir(300);
-    		if (player.isInsideOfMaterial(Material.WATER) || player.isInWater())
+    		if (!player.isInsideOfMaterial(Material.WATER) || !player.isInWater())
     		{
     			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)3600, 5));
     		}
