@@ -38,9 +38,13 @@ public class ItemPegasusBoots extends ItemArmor
     {
     	if (armorType == EntityEquipmentSlot.FEET)
     	{
-    		player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)3600, 5));
-    		player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, (int)3600, 5));
+    		player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)Double.POSITIVE_INFINITY, 5));
+    		player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, (int)Double.POSITIVE_INFINITY, 5));
     	}
+        else
+        {
+            player.removePotionEffect(MobEffects.SPEED);
+        }
     }
     
     @Override
