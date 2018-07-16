@@ -55,7 +55,7 @@ public class ItemZorasFlippers extends ItemArmor
     		}
     		else
     		{
-    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 2, -1, false, false));
+    			player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 2, 0, false, false));
     		}
     	}
     }
