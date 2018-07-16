@@ -41,19 +41,22 @@ public class ItemZorasFlippers extends ItemArmor
     {
     	if (armorType == EntityEquipmentSlot.FEET)
     	{
+		if(EntityEquipmentSlot.FEET.getItem().equals(itemStack)) 
+		{
+			if(EnchantmentHelper.getEnchantments(chest).get(Enchantments.AQUA_AFFINITY) == null)
+			{
+				chest.addEnchantment(Enchantments.AQUA_AFFINITY, 1);
+			}
+		}
     		player.setAir(300);
-    		if (!player.isInsideOfMaterial(Material.WATER) || !player.isInWater())
+    		if (player.isInWater())
     		{
-    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)Double.POSITIVE_INFINITY, 5));
+    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 2, 5, false, false));
     		}
     		else
     		{
-    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)Double.POSITIVE_INFINITY, -1));
+    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 2, -1, false, false));
     		}
-    	}
-    	else
-    	{
-    		player.removePotionEffect(MobEffects.SPEED);
     	}
     }
     
