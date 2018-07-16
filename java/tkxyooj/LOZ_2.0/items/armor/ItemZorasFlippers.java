@@ -41,13 +41,6 @@ public class ItemZorasFlippers extends ItemArmor
     {
     	if (armorType == EntityEquipmentSlot.FEET)
     	{
-		if(EntityEquipmentSlot.FEET.getItem().equals(itemStack)) 
-		{
-			if(EnchantmentHelper.getEnchantments(chest).get(Enchantments.AQUA_AFFINITY) == null)
-			{
-				chest.addEnchantment(Enchantments.AQUA_AFFINITY, 1);
-			}
-		}
     		player.setAir(300);
     		if (player.isInWater())
     		{
@@ -67,6 +60,7 @@ public class ItemZorasFlippers extends ItemArmor
 		{
 			ItemStack istack = new ItemStack(this);
 			istack.addEnchantment(Enchantments.AQUA_AFFINITY, 1);
+			istack.addEnchantment(Enchantments.DEPTH_STRIDER, 1);
 			list.add(istack);
 		}
     }
