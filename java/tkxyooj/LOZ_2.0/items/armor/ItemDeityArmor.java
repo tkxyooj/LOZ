@@ -43,16 +43,16 @@ public class ItemDeityArmor extends ItemArmor
     {
     	if (armorType == EntityEquipmentSlot.HEAD)
     	{
-    		player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, (int) 3600, (int) 1));
-    		player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION,(int)3600,(int) 1));
+    		player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 1, 1);
+    		player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 1 ,1);
     		player.setAir(300);
     		player.getFoodStats().addStats(20, 20F);
     	}
     	else if (armorType == EntityEquipmentSlot.CHEST)
     	{
-    		player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, (int)3600, (int) Double.POSITIVE_INFINITY));
-    		player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, (int) 3600, (int) 1));
-    		player.addPotionEffect(new PotionEffect(MobEffects.HASTE, (int) 3600, (int) 1));
+    		player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 1, 2);
+    		player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 1, 2);
+    		player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 1, 2);
     		player.setHealth((float) Double.POSITIVE_INFINITY);
 //    		player.capabilities.allowFlying = true;
             List<PotionEffect> effects = Lists.newArrayList(player.getActivePotionEffects());
