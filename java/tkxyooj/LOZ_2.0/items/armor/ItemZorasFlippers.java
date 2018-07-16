@@ -44,11 +44,11 @@ public class ItemZorasFlippers extends ItemArmor
     		player.setAir(300);
     		if (!player.isInsideOfMaterial(Material.WATER) || !player.isInWater())
     		{
-    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)3600, 5));
+    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)Double.POSITIVE_INFINITY, 5));
     		}
     		else
     		{
-    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)3600, -1));
+    			player.addPotionEffect(new PotionEffect(MobEffects.SPEED, (int)Double.POSITIVE_INFINITY, -1));
     		}
     	}
     	else
