@@ -28,6 +28,33 @@ public class ItemPegasusBoots extends ItemArmor
     }
 
     @Override
+    public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slotIn, ItemStack stack)
+    {
+        final Multimap<String, AttributeModifier> modifiers = super.getAttributeModifiers(slotIn, stack);
+ 
+        if (slot == EntityEquipmentSlot.FEET) 
+      	{
+            replaceModifier(modifiers, SharedMonsterAttributes.ATTACK_SPEED /* or whatever attribute you want to modify */, ATTACK_SPEED_MODIFIER /* ... */, int... amount);
+        }
+      
+        return modifiers;
+    }
+ 
+    private void replaceModifier(Multimap<String, AttributeModifier> modifierMultimap, IAttribute attribute, UUID id, double multiplier)
+    {
+        // Get the modifiers for the specified attribute
+        final Collection<AttributeModifier> modifiers = modifierMultimap.get(attribute.getAttributeUnlocalizedName());
+
+        // Find the modifier with the specified ID, if any
+        final Optional<AttributeModifier> modifierOptional = modifiers.stream().filter(attributeModifier -> attributeModifier.getID().equals(id)).findFirst();
+ 
+        if (modifierOptional.isPresent()) 
+      	{
+            final AttributeModifier modifier = modifierOptional.get();
+        }
+    }
+
+    @Override
     public void setDamage(ItemStack stack, int damage) 
     {
         super.setDamage(stack, 0);
