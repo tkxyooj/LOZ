@@ -1,9 +1,9 @@
 @SideOnly(Side.CLIENT)
-public class RenderLightArrow extends Render<EntityLightArrow>
+public class RenderEntityLightArrow extends Render<EntityLightArrow>
 {
     private static final ResourceLocation skin = new ResourceLocation(LOZ.MODID,"textures/entities/projectile/arrow_light.png");
     
-    public RenderLightArrow(RenderManager renderManager)
+    public RenderEntityLightArrow(RenderManager renderManager)
     {
         super(renderManager);
     }
