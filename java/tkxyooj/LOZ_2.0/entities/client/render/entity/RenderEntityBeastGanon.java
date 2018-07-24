@@ -25,6 +25,14 @@ public class RenderEntityBeastGanon <T extends EntityBeastGanon> extends RenderL
 //	public void doRender(@Nonnull EntityPig beastganon, double par2, double par4, double par6, float par8, float par9) {
 //		super.doRender(beastganon, par2, par4, par6, par8, par9);
 //	}
+	/** scaling of the beast */
+	// scale the whole thing for big or small entities
+	float scaleFactor = 3.0F;
+	GL11.glPushMatrix();
+	GL11.glTranslatef(0F, 1.5F-1.5F*scaleFactor, 0F);
+	GL11.glScalef(scaleFactor, scaleFactor, scaleFactor);
+
+	GL11.glPopMatrix();
 
 	@Nonnull
 	@Override
